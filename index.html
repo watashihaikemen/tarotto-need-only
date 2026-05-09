@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Logic - Official Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+        :root {
+            --bg: #050505;
+            --card-bg: #111111;
+            --accent: #ffffff;
+            --text-main: #f0f0f0;
+            --text-dim: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), var(--bg)),
+                        url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 600px;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(5, 5, 5, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #222;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section { margin-bottom: 120px; }
+
+        h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #333;
+            margin-left: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: #444; transform: translateY(-5px); }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .card p { color: var(--text-dim); font-size: 0.95rem; }
+
+        /* Profile Special Card */
+        .profile-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop');
+            background-size: cover;
+            border-radius: 50%;
+            filter: grayscale(1);
+        }
+
+        .profile-info p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            color: #333;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Absolute Logic.</h1>
+        <p>追求された純粋な論理と、高精細なリアリズム。妥協なき26歳のポートフォリオ。</p>
+    </header>
+
+    <nav>
+        <a href="#logics">Logic</a>
+        <a href="#visual">Visual</a>
+        <a href="#gaming">Strategy</a>
+        <a href="#profile">About</a>
+    </nav>
+
+    <div class="container">
+        <section id="logics">
+            <h2>Logical Analysis</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Statistical Thinking</h3>
+                    <p>ヒット＆ブロー等の数理論理パズルにおける、全パターンの統計的網羅。直感に頼らず、確率に基づいた最短の手順を定義する。</p>
+                </div>
+                <div class="card">
+                    <h3>Precision Strategy</h3>
+                    <p>不動産投資や資産運用のROIシミュレーション。論理的な整合性が取れない情報を排除し、確実なデータのみを構築する。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visual">
+            <h2>Visual Aesthetics</h2>
+            <div class="card" style="width: 100%;">
+                <h3>Hyper-Realism Generation</h3>
+                <p>AI画像生成において、毛穴や光の拡散まで再現する「超写実」の追求。不自然な美化を拒絶し、物理的なリアリティを最優先する独自のプロンプト設計。</p>
+            </div>
+        </section>
+
+        <section id="gaming">
+            <h2>Gaming Strategy</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Mobile Legends</h3>
+                    <p>環境（Meta）の徹底分析と、勝利に直結するヒーロー操作の最適解。理論に基づく立ち回りの構築。</p>
+                </div>
+                <div class="card">
+                    <h3>Competitive Pokemon</h3>
+                    <p>XY世代から続く、徹底的な個体値・努力値管理と、論理的相性補完によるパーティビルディング。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile">
+            <h2>About Me</h2>
+            <div class="profile-grid">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <p><strong>Age:</strong> 26</p>
+                    <p><strong>Identity:</strong> 論理至上主義者 / 最強の探求者</p>
+                    <p><strong>Expertise:</strong> 英語（留学経験有）、統計解析、AI画像生成、論理的議論</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        NO COMPROMISE. NO ILLUSION. LOGIC ONLY. &copy; 2026
+    </footer>
+
+</body>
+</html>
